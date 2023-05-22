@@ -1,0 +1,31 @@
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="text-align: center">Option A:</th>
+            <th></th>
+            <th style="text-align: center">Option B:</th>
+        </tr>
+
+    </thead>
+
+
+     {{ for t in trials }}
+    <tr>
+        <td style="text-align: center">
+            {{ t.lottery_high_A }} with a probability of {{ t.prob_high_percent }}%, <br/>
+            {{ t.lottery_low_A }} with a probability of {{ t.prob_low_percent }}%
+        </td>
+        <td style="text-align: center">
+            {{ if not is_results }}
+            <input type="radio" name="{{ t.id }}" value="0" required onclick="sendPref(this)">
+            <input type="radio" name="{{ t.id }}" value="1" required onclick="sendPref(this)">
+            {{ endif }}
+        </td>
+        <td style="text-align: center">
+            {{ t.lottery_high_B }} with a probability of {{ t.prob_high_percent }}%, <br/>
+            {{ t.lottery_low_B }} with a probability of {{ t.prob_low_percent }}%
+        </td>
+    </tr>
+    {{ endfor }}
+</table>

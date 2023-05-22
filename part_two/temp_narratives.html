@@ -1,0 +1,105 @@
+
+<div class="alert-info">
+    <div class="card-body">
+
+        {#################################################################################}
+        {######################           T0 participants        #########################}
+        {#################################################################################}
+
+        {{ if player.treatment_0 }}
+
+        <p align="justify">
+            A tree is a tall plant with a trunk and branches made of wood. Trees can
+            live for many years. The oldest tree ever discovered is approximately
+            5,000 years old and the oldest tree from the UK is about 1,000. The four
+            main parts of a tree are the roots, the trunk, the branches, and the leaves
+            (from Simple English Wikipedia).
+        </p>
+
+        {#################################################################################}
+        {######################            T1 participants       #########################}
+        {#################################################################################}
+
+        {{ elif player.treatment_1 }}
+
+        <p align="justify">
+            {{ group.character_random }} is
+            another participant in this experiment.
+            {{ if group.character_sex == C.CHARACTERS_SEX.0 }}She
+            {{ else }}He{{ endif }} faced the
+            same scenarios that you faced in the previous round.
+
+            However, in contrast to you, {{ group.character_sex }}
+
+            {################       Only JUST WORLD participants     ###################}
+
+
+            {{ if participant.c_role == "Just World" }}
+
+            <strong>did not</strong> have the opportunity to
+            <strong>choose freely</strong> between the risky,
+            and the safe alternative.
+
+            {{ group.character_random }}
+            was not free to choose,
+            {{ group.character_sex }}
+            <strong>had to</strong> face the risky lottery.
+
+            {################      Only UNJUST WORLD participants     ####################}
+
+            {{ else }}
+
+            did not face any distinction between Elite and Non Elite.
+            {{ group.character_random }}
+            <strong>did</strong> have the opportunity to
+            <strong>choose freely</strong> between the risky,
+            and the safe alternative.
+
+            {{ group.character_random }}
+            was free to choose,
+            {{ group.character_sex }}
+            <strong>did not</strong> have to face the risky lottery.
+
+            {{ endif }}
+        </p>
+
+        {{ else }}
+
+        {#################################################################################}
+        {######################         T2 participants       ############################}
+        {#################################################################################}
+
+        <p align="justify">
+            A group of participants in this experiment faced the same
+            scenarios that you faced in the previous part. However,
+            in contrast to you, everybody in this group
+
+            {################      Only JUST WORLD participants     ####################}
+
+            {{ if participant.c_role == "Just World" }}
+
+            <strong>did not</strong> have the opportunity
+            to <strong>choose freely</strong> between the risky and
+            the safe alternative. They were not free to choose, but
+            <strong>had to</strong> face the risky alternative.
+
+            {################      Only UNJUST WORLD participants     ##################}
+
+            {{ else }}
+
+            <strong>did</strong> have the opportunity to
+            <strong>choose freely</strong> between the risky and
+            the safe alternative. Everybody was free to choose.
+            Anybody in this group <strong>had to</strong>
+            face the risky alternative, as anybody faced any
+            distinction between Elite and Non Elite. They could
+            always decide freely.
+
+
+            {{ endif }}
+        </p>
+
+        {{ endif }}
+
+    </div>
+</div>

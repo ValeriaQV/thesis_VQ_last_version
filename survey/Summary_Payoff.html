@@ -1,0 +1,39 @@
+{{ block title }}Summary payoff{{ endblock }}
+{{ block content }}
+
+    <table class="table">
+        <tr>
+            <td>Your payoff from Part I:</td>
+            <td>{{ participant.p1_payoff }}</td>
+        </tr>
+        <tr>
+            <td>Your payoff from Part II:</td>
+            <td>{{ participant.p2_payoff }}</td>
+        </tr>
+        <tr>
+            <td>Your additional payoff:</td>
+            <td>{{ participant.cl_payoff }}</td>
+        </tr>
+        <tr class="bg-light">
+            <td><strong>Total:</strong></td>
+            <td><strong>{{ participant.sum_payoffs }}</strong></td>
+        </tr>
+
+    </table>
+
+    <div class="alert alert-success" role="alert">
+
+        <h5 >
+            Your final payoff including participation fee is: {{ participant.payoff_plus_participation_fee }}.
+        </h5>
+
+    </div>
+
+
+
+
+
+
+    {{ next_button }}
+
+{{ endblock }}

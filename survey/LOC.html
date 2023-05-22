@@ -1,0 +1,45 @@
+{{ block title }}
+{{ endblock }}
+{{ block content }}
+
+
+    Please select to what extent you agree with the following statements
+    in a scale from <u>1 "Strongly agree"</u> to <u>7 "Strongly disagree"</u>.
+    <p></p>
+
+
+<table class="table table-striped">
+    <tr>
+        <td></td>
+        <td style="text-align: center">
+            1</br>
+            Strongly agree
+        </td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td style="text-align: center">
+            7</br>
+            Strongly disagree
+        </td>
+    </tr>
+
+    {{ for field in form }}
+        <tr>
+
+            <td>{{ field.label }}</td>
+
+            {{ for choice in field }}
+
+                <td style="text-align: center">{{ choice }}</td>
+            {{ endfor }}
+        </tr>
+    {{ endfor }}
+
+</table>
+
+    {{ next_button }}
+
+{{ endblock }}

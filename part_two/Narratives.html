@@ -1,0 +1,24 @@
+{{ block title }}Part II{{ endblock }}
+{{ block content }}
+
+    Please read the following text carefully:
+
+<p></p>
+
+    {{ include C.NARRATIVES }}
+
+<p></p>
+
+After 45 seconds the "Next" button will be displayed, and you can submit your decisions.
+
+<p></p>
+
+    <button class="btn btn-primary" style="display: none" id="next-button">Next</button>
+
+    <script>
+    setTimeout(function() {
+    document.getElementById('next-button').style.display = 'block';
+    }, 45 * 1000);
+    </script>
+
+{{ endblock }}

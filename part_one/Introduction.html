@@ -1,0 +1,33 @@
+{{ block title }}
+    Introduction
+{{ endblock }}
+{{ block content }}
+
+
+    <div class="card bg-light m-3">
+        <div class="card-body">
+
+        <p align="justify">
+            Welcome to our experiment!
+        </p>
+        <p align="justify">
+            In this experiment, you can earn money by collecting tokens. All the tokens you earn
+            during the experiment will be exchanged into money ({{ 80|cu }} = 1 EUR). In addition,
+            you will receive a participation fee of 4 EUR, irrespective of your decisions. You will
+            receive the earned amount after completing the experiment. Please do not communicate
+            with other participants during the experiment. Your decisions and your identity will
+            remain anonymous. The experiment will take approximately 45 minutes.
+        </p>
+            <p align="justify">
+                The experiment consists of 3 parts and a final questionnaire. The computer selects in
+                each part <strong>one scenario</strong> for your final payoff. The final payoff consists
+                of the outcomes' sum from the selected scenarios in the First, Second and Third Part of
+                the experiment. In the following, we describe the rules of the First Part.
+                <strong>Please read the instructions carefully.</strong>
+            </p>
+        </div>
+    </div>
+
+    {{ next_button }}
+
+{{ endblock }}

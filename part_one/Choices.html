@@ -1,0 +1,15 @@
+{{ block title }}
+    Part I
+{{ endblock }}
+{{ block content }}
+
+    You have <strong>{{ C.ENDOWMENT }}</strong>, which option do you prefer for each scenario?
+
+    <p></p>
+
+    {{ include C.CHOICES_TEMPLATE }}
+
+
+    {{ next_button }}
+
+{{ endblock }}

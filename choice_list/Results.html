@@ -1,0 +1,28 @@
+{{ block title }}{{ endblock }}
+
+{{ block content }}
+
+<p>The computer chose this row:</p>
+
+{{ include C.TABLE_TEMPLATE }}
+
+<div class="alert alert-success" role="alert">
+    <h6>
+
+        You chose Option
+
+        {{ if player.chose_B }}B{{ else }}A{{ endif }}, and
+
+        {{ if player.won_lottery }}won{{ else }}lost{{ endif }}
+
+        the lottery.
+        You earned {{ participant.cl_payoff }}.
+
+    </h6>
+
+</div>
+    {{ next_button }}
+
+{{ endblock }}
+
+

@@ -1,0 +1,32 @@
+{{ block title }}
+    Comprehension Questions
+{{ endblock }}
+{{ block content }}
+
+    Before starting the experiment, please answer the following questions:
+    <p>
+
+    </p>
+        <div class="card bg-light m-3">
+            <div class="card-body">
+
+            {{ formfield "quiz_1_all" }}
+
+            </div>
+        </div>
+
+        <div class="card bg-light m-3">
+            <div class="card-body">
+
+            {{ formfield "quiz_2_all" }}
+
+            </div>
+        </div>
+
+
+    <p>
+
+    </p>
+    {{ next_button }}
+
+{{ endblock }}
